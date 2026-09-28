@@ -22,7 +22,7 @@ local dict = {
         "แปลไทยโดย บาฟัค นำไปแจกต่อฝากให้เครดิตคนแปลด้วยครับ",
     ["Discord"] = "ดิสคอร์ด",
     ["Become part of the Limbo Hub community on Discord for the latest updates, script support, and exclusive releases. Copy the invite link below and join us today!"] =
-        "อาจจะแปลไม่ครบ 100% นะครับเพราะบางอันมันเยอะมากนะครับ แต่ยังไงก็ฝากติดตามยูทูป บาฟัค ด้วยน้าครับ",
+        "อาจจะแปลไม่ครบ 100% นะครับ เพราะบางอันมันเยอะมาก แต่ยังไงก็ฝากติดตามยูทูป บาฟัค ด้วยนะครับ",
     -- =========================
     -- เมนูหลัก
     -- =========================
@@ -50,10 +50,30 @@ local dict = {
     ["Claim Offline Earnings"] = "รับเงินที่ได้รับขณะออฟไลน์",
     ["Auto Claim Index"] = "รับ Index อัตโนมัติ",
     ["Auto Equip Best Pets"] = "ใส่สัตว์ที่ดีที่สุด",
-    ["Esp Eggs"] = "ESP ไข่",
-    ["ESP Eggs"] = "ESP ไข่",
-    ["Esp Pets"] = "ESP สัตว์",
-    ["ESP Pets"] = "ESP สัตว์",
+    -- =========================
+    -- ESP
+    -- =========================
+    ["ESP"] = "แสดงข้อมูล",
+    ["Esp"] = "แสดงข้อมูล",
+    ["ESP Eggs"] = "แสดงข้อมูลไข่",
+    ["Esp Eggs"] = "แสดงข้อมูลไข่",
+    ["ESP Pets"] = "แสดงข้อมูลสัตว์",
+    ["Esp Pets"] = "แสดงข้อมูลสัตว์",
+    ["ESP Egg Name"] = "แสดงชื่อไข่",
+    ["Esp Egg Name"] = "แสดงชื่อไข่",
+    ["ESP Rarity"] = "แสดงระดับความหายาก",
+    ["Esp Rarity"] = "แสดงระดับความหายาก",
+    ["ESP Kg"] = "แสดงน้ำหนัก (Kg)",
+    ["Esp Kg"] = "แสดงน้ำหนัก (Kg)",
+    ["ESP Mutation"] = "แสดงการกลายพันธุ์",
+    ["Esp Mutation"] = "แสดงการกลายพันธุ์",
+    ["ESP Area"] = "แสดงพื้นที่",
+    ["Esp Area"] = "แสดงพื้นที่",
+    ["ESP Slot"] = "แสดงช่อง",
+    ["Esp Slot"] = "แสดงช่อง",
+    -- =========================
+    -- Auto
+    -- =========================
     ["Auto Steal Eggs"] = "ขโมยไข่อัตโนมัติ",
     ["Auto Place Egg"] = "วางไข่อัตโนมัติ",
     ["Auto Hatch Egg"] = "ฟักไข่อัตโนมัติ",
@@ -68,12 +88,12 @@ local dict = {
     ["Enable Auto Steal"] = "เปิดขโมยอัตโนมัติ",
     ["Target Areas"] = "พื้นที่เป้าหมาย",
     ["Target Areas Toggle"] = "เปิดพื้นที่เป้าหมาย",
-    ["Target Categories (Species)"] = "ชนิดเป้าหมาย",
-    ["Target Categories Toggle"] = "เปิดชนิดเป้าหมาย",
-    ["Target Rarities"] = "ระดับเป้าหมาย",
-    ["Target Rarities Toggle"] = "เปิดระดับเป้าหมาย",
-    ["Target Mutations"] = "Mutation เป้าหมาย",
-    ["Target Mutations Toggle"] = "เปิด Mutation",
+    ["Target Categories (Species)"] = "หมวดหมู่สัตว์เป้าหมาย",
+    ["Target Categories Toggle"] = "เปิดหมวดหมู่สัตว์เป้าหมาย",
+    ["Target Rarities"] = "ระดับความหายากเป้าหมาย",
+    ["Target Rarities Toggle"] = "เปิดระดับความหายากเป้าหมาย",
+    ["Target Mutations"] = "การกลายพันธุ์เป้าหมาย",
+    ["Target Mutations Toggle"] = "เปิดการกลายพันธุ์เป้าหมาย",
     ["Target Value"] = "ค่าที่ต้องการ",
     ["Target Value Toggle"] = "เปิดค่าที่ต้องการ",
     ["Min Weight (Kg) — 0 = Any"] =
@@ -88,7 +108,7 @@ local dict = {
     -- Auto Sell Pets
     -- =========================
     ["Sell Pets Now"] = "ขายสัตว์ตอนนี้",
-    ["Filter Pet Rarities to Sell"] = "เลือกระดับสัตว์ที่จะขาย",
+    ["Filter Pet Rarities to Sell"] = "เลือกระดับความหายากของสัตว์ที่จะขาย",
     ["Pet Weight Threshold (Kg)"] = "น้ำหนักสัตว์ขั้นต่ำ (Kg)",
     ["Sell Below Weight"] = "ขายสัตว์ที่ต่ำกว่าน้ำหนัก",
     ["Sell Above Weight"] = "ขายสัตว์ที่สูงกว่าน้ำหนัก",
@@ -97,23 +117,29 @@ local dict = {
     -- Auto Sell Eggs
     -- =========================
     ["Sell Eggs Now"] = "ขายไข่ตอนนี้",
-    ["Filter Egg Rarities to Sell"] = "เลือกระดับไข่ที่จะขาย",
+    ["Filter Egg Rarities to Sell"] = "เลือกระดับความหายากของไข่ที่จะขาย",
     ["Egg Weight Threshold (Kg)"] = "น้ำหนักไข่ขั้นต่ำ (Kg)",
     -- =========================
-    -- Auto Favorite
+    -- สัตว์โปรด
     -- =========================
-    ["Auto Favorite Pets"] = "โปรดสัตว์อัตโนมัติ",
-    ["Pet Categories To Favorite"] = "ชนิดสัตว์ที่ต้องการโปรด",
-    ["Pet Rarities To Favorite"] = "ระดับสัตว์ที่ต้องการโปรด",
-    ["Toggle Auto Favorite"] = "เปิดโปรดสัตว์อัตโนมัติ",
-    ["Favorite Pets Now"] = "โปรดสัตว์ตอนนี้",
-    ["Unfavorite All"] = "ยกเลิกโปรดทั้งหมด",
+    ["Auto Favorite Pets"] =
+        "ตั้งสัตว์โปรดอัตโนมัติ",
+    ["Pet Categories To Favorite"] =
+        "หมวดหมู่สัตว์โปรด",
+    ["Pet Rarities To Favorite"] =
+        "ระดับความหายากของสัตว์โปรด",
+    ["Toggle Auto Favorite"] =
+        "เปิดตั้งสัตว์โปรดอัตโนมัติ",
+    ["Favorite Pets Now"] =
+        "ตั้งสัตว์โปรดตอนนี้",
+    ["Unfavorite All"] =
+        "ยกเลิกสัตว์โปรดทั้งหมด",
     -- =========================
     -- Auto Fuse
     -- =========================
     ["Auto Fuse Pets"] = "รวมสัตว์อัตโนมัติ",
-    ["Pet Categories To Fuse"] = "ชนิดสัตว์ที่ต้องการรวม",
-    ["Pet Rarities To Fuse"] = "ระดับสัตว์ที่ต้องการรวม",
+    ["Pet Categories To Fuse"] = "หมวดหมู่สัตว์ที่ต้องการรวม",
+    ["Pet Rarities To Fuse"] = "ระดับความหายากของสัตว์ที่ต้องการรวม",
     ["Auto Fuse"] = "รวมอัตโนมัติ",
     ["Fuse Pets Now"] = "รวมสัตว์ตอนนี้",
     -- =========================
@@ -146,11 +172,11 @@ local dict = {
     ["Rare"] = "แรร์",
     ["Epic"] = "อีปิค",
     ["Legendary"] = "ตำนาน",
-    ["Mythic"] = "มิธิค",
-    ["Secret"] = "ลับ",
-    ["Divine"] = "Divine",
-    ["Eternal"] = "Eternal",
-    ["Cosmic"] = "Cosmic",
+    ["Mythic"] = "มิธิค (แนะนำ)",
+    ["Secret"] = "ลับ (แนะนำ)",
+    ["Divine"] = "Divine (แนะนำ)",
+    ["Eternal"] = "Eternal (แนะนำ)",
+    ["Cosmic"] = "Cosmic (แนะนำ)",
     -- =========================
     -- Areas
     -- =========================
@@ -161,15 +187,20 @@ local dict = {
     ["Snow"] = "หิมะ",
     ["Volcano"] = "ภูเขาไฟ",
     ["Abyss Ocean"] = "มหาสมุทรอเวจี",
-    ["Prehistoric"] = "ยุคก่อนประวัติศาสตร์",
-    ["Cherry Blossom"] = "ซากุระ",
-    ["Titan Temple"] = "วิหารไททัน",
-    ["Light Dark"] = "แสงและความมืด",
+    ["Prehistoric"] =
+        "ยุคก่อนประวัติศาสตร์ (แนะนำ)",
+    ["Cherry Blossom"] =
+        "ซากุระ (แนะนำ)",
+    ["Titan Temple"] =
+        "วิหารไททัน (แนะนำ)",
+    ["Light Dark"] =
+        "แสงและความมืด (แนะนำ)",
     -- =========================
     -- Mutations
     -- =========================
     ["Silver"] = "เงิน",
-    ["Sakura"] = "ซากุระ",
+    ["Sakura"] =
+        "ซากุระ (แนะนำ)",
     ["Golden"] = "ทอง",
     ["GreatBloom"] = "บุปผายิ่งใหญ่",
     ["Boss"] = "บอส",
@@ -179,47 +210,73 @@ local dict = {
     -- =========================
     -- Dr. Scramble
     -- =========================
-    ["Dr. Scramble Experiment"] = "การทดลองของ Dr. Scramble",
-    ["Minimum Drone HP"] = "HP โดรนขั้นต่ำ",
-    ["Any HP"] = "HP ใดก็ได้",
-    ["Auto Hunt Experiments"] = "ล่าการทดลองอัตโนมัติ",
-    ["Quest Auto Collect Gear"] = "เก็บอุปกรณ์เควสต์อัตโนมัติ",
-    ["Dr. Scramble Laboratory"] = "ห้องทดลอง Dr. Scramble",
-    ["Mode"] = "โหมด",
-    ["Enable Auto Labratory"] = "เปิดห้องทดลองอัตโนมัติ",
-    ["Enable Auto Laboratory"] = "เปิดห้องทดลองอัตโนมัติ",
-    ["Free Reroll"] = "สุ่มใหม่ฟรี",
+    ["Dr. Scramble Experiment"] =
+        "การทดลองของ Dr. Scramble",
+    ["Minimum Drone HP"] =
+        "HP โดรนขั้นต่ำ",
+    ["Any HP"] =
+        "HP ใดก็ได้",
+    ["Auto Hunt Experiments"] =
+        "ล่าการทดลองอัตโนมัติ",
+    ["Quest Auto Collect Gear"] =
+        "เก็บอุปกรณ์เควสต์อัตโนมัติ",
+    ["Dr. Scramble Laboratory"] =
+        "ห้องทดลอง Dr. Scramble",
+    ["Mode"] =
+        "โหมด",
+    ["Enable Auto Labratory"] =
+        "เปิดห้องทดลองอัตโนมัติ",
+    ["Enable Auto Laboratory"] =
+        "เปิดห้องทดลองอัตโนมัติ",
+    ["Free Reroll"] =
+        "สุ่มใหม่ฟรี",
     -- =========================
     -- Shop
     -- =========================
-    ["Dr. Scramble Sample Shop"] = "ร้านตัวอย่าง Dr. Scramble",
-    ["Shop Item"] = "ไอเทมในร้าน",
+    ["Dr. Scramble Sample Shop"] =
+        "ร้านตัวอย่าง Dr. Scramble",
+    ["Shop Item"] =
+        "ไอเทมในร้าน",
     -- =========================
     -- Experiment
     -- =========================
-    ["Experiment #001"] = "การทดลอง #001",
-    ["Nibbles #013"] = "Nibbles #013",
-    ["2x Cash Booster"] = "บูสต์เงิน 2 เท่า",
-    ["1.25x Speed"] = "ความเร็ว 1.25 เท่า",
-    ["2x Treadmill Booster"] = "บูสต์ลู่วิ่ง 2 เท่า",
+    ["Experiment #001"] =
+        "การทดลอง #001",
+    ["Nibbles #013"] =
+        "Nibbles #013",
+    ["2x Cash Booster"] =
+        "บูสต์เงิน 2 เท่า",
+    ["1.25x Speed"] =
+        "ความเร็ว 1.25 เท่า",
+    ["2x Treadmill Booster"] =
+        "บูสต์ลู่วิ่ง 2 เท่า",
     -- =========================
     -- Webhook
     -- =========================
-    ["Webhook URL"] = "URL เว็บฮุค",
-    ["Rarity Filter"] = "กรองระดับ",
-    ["Notify On Steal"] = "แจ้งเตือนเมื่อขโมย",
-    ["Notify On Hatch"] = "แจ้งเตือนเมื่อฟัก",
+    ["Webhook URL"] =
+        "URL เว็บฮุค",
+    ["Rarity Filter"] =
+        "กรองระดับความหายาก",
+    ["Notify On Steal"] =
+        "แจ้งเตือนเมื่อขโมย",
+    ["Notify On Hatch"] =
+        "แจ้งเตือนเมื่อฟัก",
     -- =========================
     -- Utilities
     -- =========================
-    ["Anti AFK"] = "กัน AFK",
-    ["Auto Reconnect"] = "เชื่อมต่อใหม่อัตโนมัติ",
+    ["Anti AFK"] =
+        "กัน AFK",
+    ["Auto Reconnect"] =
+        "เชื่อมต่อใหม่อัตโนมัติ",
     -- =========================
     -- Performance
     -- =========================
-    ["Performa"] = "ประสิทธิภาพ",
-    ["Performance"] = "ประสิทธิภาพ",
-    ["FPS Boost"] = "เพิ่ม FPS",
+    ["Performa"] =
+        "ประสิทธิภาพ",
+    ["Performance"] =
+        "ประสิทธิภาพ",
+    ["FPS Boost"] =
+        "เพิ่ม FPS",
     ["Hide All Pets (Max FPS)"] =
         "ซ่อนสัตว์ทั้งหมด (FPS สูงสุด)",
     ["Hide Owner Eggs Placed"] =
@@ -261,11 +318,8 @@ local function cleanText(text)
         return ""
     end
     text = tostring(text)
-    -- ลบ RichText
     text = text:gsub("<[^>]->", "")
-    -- รวมช่องว่าง / ขึ้นบรรทัดใหม่
     text = text:gsub("%s+", " ")
-    -- ตัดช่องว่างหัวท้าย
     text = text:gsub("^%s+", "")
     text = text:gsub("%s+$", "")
     return string.lower(text)
@@ -279,30 +333,21 @@ local function translateText(text)
     end
     local original = tostring(text)
     local key = cleanText(original)
-    -- ========================================
-    -- Discord แบบบังคับ
-    -- ========================================
-    -- หัวข้อ Discord
+    -- Discord
     if key == "join our community" then
         return "แปลไทยโดยบาฟัค"
     end
-    -- ข้อความยาว Discord
     if key:find("become part of the limbo hub community") then
-        return "อาจจะแปลไม่ครบ 100% นะครับเพราะบางอันมันเยอะมากนะครับ แต่ยังไงก็ฝากติดตามยูทูป บาฟัค ด้วยน้าครับ"
+        return "อาจจะแปลไม่ครบ 100% นะครับ เพราะบางอันมันเยอะมาก แต่ยังไงก็ฝากติดตามยูทูป บาฟัค ด้วยนะครับ"
     end
-    -- ปุ่ม Discord
     if key == "copy discord link" then
         return "แปลไทยโดย บาฟัค นำไปแจกต่อฝากให้เครดิตคนแปลด้วยครับ"
     end
-    -- ========================================
     -- แปลตรงตัว
-    -- ========================================
     if translations[key] then
         return translations[key]
     end
-    -- ========================================
     -- Welcome + ชื่อ
-    -- ========================================
     local name = original:match("^%s*Welcome,?%s+(.+)$")
     if name then
         return "ยินดีต้อนรับ, " .. name
